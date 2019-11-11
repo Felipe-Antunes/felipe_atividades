@@ -1,4 +1,3 @@
-
 <?php
 
   $titulo = "Dinâmico";
@@ -14,7 +13,7 @@
 
 	<meta charset="utf-8">
 	<title>Variáveis</title>
-	<link rel="stylesheet" type="text/css" href="scss/estilo.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
 
 </head>
 <body>
@@ -30,5 +29,6 @@
   <p>$string: <?php var_dump($string); ?></p>
 
   <a href="index.html">Aula 05</a><br>
+
 </body>
 </html>
