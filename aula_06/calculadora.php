@@ -4,6 +4,8 @@
  $n1 = $_GET["n1"];
  $n2 = $_GET["n2"];
 
+$ehPost = $_SERVER["REQUEST_METHOD"];
+
  $soma = $n1 + $n2;
 
  $sub = $n1 - $n2;
@@ -47,13 +49,32 @@ body {
  	color: #ffffff
  }
 
-legend {
-	color: #ffffff;
-}
-
     </style>
 </head>
 <body>
+    
+       <form method="post" action="calculadora.php"> 
+         <fieldset>
+         
+           <legend>Calculadora</legend>
+
+        <label>Número 1:</label>
+         	<input type="number" name="n1" id="n1" autofocus required><br>
+
+        <br>
+
+        <label>Número 2:</label>
+         	<input type="number" name="n2" id="n2" required><br><br>
+
+        <input type="submit" name="entre" id="entre" value="Entre">
+        <input type="reset" name="limpar" id="limpar" value="Limpar">
+
+     </fieldset>
+   </form>
+
+
+
+   <?php if ($ehPost) {  ?>
 
    <h1>Calculadora</h1>
 
@@ -71,5 +92,6 @@ legend {
 
    <p>Divisão: <?php echo $div ?></p>
 
+   <?php } ?>
 </body>
 </html>
